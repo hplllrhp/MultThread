@@ -27,11 +27,13 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    threadfromqthread.cpp
+    threadfromqthread.cpp \
+    threadobject.cpp
 
 HEADERS += \
         mainwindow.h \
-    threadfromqthread.h
+    threadfromqthread.h \
+    threadobject.h
 
 FORMS += \
         mainwindow.ui
