@@ -10,6 +10,7 @@
 #include "threadfromqthread.h"
 #include <QTimer>
 #include <QDebug>
+#include "threadobject.h"
 
 namespace Ui {
 class MainWindow;
@@ -52,12 +53,22 @@ private slots:
 
     void onLocalThreadDestroy(QObject *obj);
 
+    void onButtonObjectMove2ThreadClicked();
+    void onButtonObjectMove2Thread2Clicked();
+    void onButtonObjectThreadStopClicked();
+    void startObjThread();
+
 private:
     Ui::MainWindow *ui;
     ThreadFromQthread *m_thread;
     QTimer *m_heart;
     ThreadFromQthread *m_cunrrentRunLocalThread;
+    QThread m_objThread;
+    ThreadObject* m_obj;
 
+signals:
+    void startObjThreadWork1();
+    void startObjThreadWork2();
 
 };
 
